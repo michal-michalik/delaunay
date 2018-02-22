@@ -12,6 +12,8 @@ class HalfEdge
     {
         $this->vertex = &$vertex;
         $this->face = &$face;
+
+        $vertex->incidentHalfEdge = &$this;
     }
 
     public function &head()
