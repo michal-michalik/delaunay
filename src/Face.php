@@ -22,7 +22,7 @@ class Face
         $this->halfEdge = &$he0;
     }
 
-    public function &getEdge($i)
+    public function &getEdge($i = 0)
     {
         $i = $i % 3;
 
