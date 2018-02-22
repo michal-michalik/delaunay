@@ -4,22 +4,22 @@ class Face
 {
     public $halfEdge;
 
-    public function create(&$v0, &$v1, &$v2)
+    public function create(&$v1, &$v2, &$v3)
     {
-        $he0 = new HalfEdge($v0, $this);
         $he1 = new HalfEdge($v1, $this);
         $he2 = new HalfEdge($v2, $this);
+        $he3 = new HalfEdge($v3, $this);
 
-        $he2->prev = &$he1;
-        $he0->next = &$he2->prev;
+        $he3->prev = &$he2;
+        $he1->next = &$he3->prev;
 
-        $he0->prev = &$he2;
-        $he1->next = &$he0->prev;
-
-        $he1->prev = &$he0;
+        $he1->prev = &$he3;
         $he2->next = &$he1->prev;
 
-        $this->halfEdge = &$he0;
+        $he2->prev = &$he1;
+        $he3->next = &$he2->prev;
+
+        $this->halfEdge = &$he1;
     }
 
     public function &getEdge($i = 0)
