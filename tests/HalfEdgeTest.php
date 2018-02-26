@@ -9,14 +9,14 @@ use PHPUnit\Framework\TestCase;
 
 class HalfEdgeTest extends TestCase
 {
-    public function testSetTwin()
+    public function testSettinTwinHalfEdge()
     {
         //    v3   v4
-        //     •---•
+        //     *---*
         //     |\  |
         //     | \ |
         //     |  \|
-        //     •---•
+        //     *---*
         //    v1   v2
 
         $vertex1 = new Vertex(0, 0, 0);
