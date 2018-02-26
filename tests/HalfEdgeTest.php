@@ -9,7 +9,7 @@ use PHPUnit\Framework\TestCase;
 
 class HalfEdgeTest extends TestCase
 {
-    public function testSettinTwinHalfEdge()
+    public function testSettingTwinHalfEdge()
     {
         //    v3   v4
         //     *---*
